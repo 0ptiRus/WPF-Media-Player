@@ -1,0 +1,19 @@
+﻿<Window x:Class="homework06_11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:homework06_11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <UniformGrid DockPanel.Dock="Bottom">
+            <Button Click="ButtonPlay_Click">Play</Button>
+            <Button Click="ButtonPause_Click">Pause</Button>
+            <TextBox Name="textbox" TextChanged="textbox_TextChanged"></TextBox>
+            <Slider Minimum="0" Maximum="1" TickFrequency="0.1" TickPlacement="Both" ValueChanged="Slider_ValueChanged"></Slider>
+        </UniformGrid>
+        <MediaElement Name="media" Source="" MediaFailed="media_MediaFailed" LoadedBehavior="Manual" UnloadedBehavior="Manual"></MediaElement>
+        <!--<Slider Name="video_slider" Minimum="0" Maximum="1" TickFrequency="1" TickPlacement="Both" ValueChanged="Slider_ValueChanged_1"></Slider>-->
+    </DockPanel>
+</Window>
